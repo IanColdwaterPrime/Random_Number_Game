@@ -1,5 +1,4 @@
 /*traffic light colors
-
 #c00
 #f00
 #ff6a00
@@ -10,6 +9,15 @@
 #87db00
 #1fcc00
 #1aad00*/
+
+.winner {
+}
+
+h1{
+  font-size: 200px;
+  font-family: Helvetica, sans-serif;
+  text-align: center;
+}
 
 button {
 border:1px solid #5c5c5c; -webkit-border-radius: 3px; -moz-border-radius: 3px;border-radius: 3px;font-size:12px;font-family:helvetica, sans-serif; padding: 10px 10px 10px 10px; text-decoration:none; display:inline-block;text-shadow: -1px -1px 0 rgba(0,0,0,0.3);font-weight:bold; color: #FFFFFF;
