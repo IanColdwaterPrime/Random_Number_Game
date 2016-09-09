@@ -1,8 +1,10 @@
 //random Number module
-var randomNumber= function(min, max, interger){
+
+
+var randomNumber= function(min, max, integer){
   //get random Number between min max
   var rando = Math.random()*(max - min)+min;
-  if(interger){
+  if(integer){
     rando = Math.floor(rando);
   }
   return rando;
