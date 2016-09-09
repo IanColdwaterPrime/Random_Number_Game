@@ -82,7 +82,8 @@ var displayResults = function () {
   for (var i = 0; i < playerResults.length; i++) {
     if(playerResults[i] === "THE WINNER"){
       $('.winner').show();
-    }else{
+    }
+  }  
 
       $('.resultsSpace').append('<h3>Player One:</h3><p> You guessed: '+playerGuesses.playerOne+ '</p> <p> You were ' +playerResults[0]+'</p>');
       $('.resultsSpace').append('<h3>Player Two:</h3><p> You guessed: '+playerGuesses.playerTwo+ '</p> <p>You were ' +playerResults[1]+'</p>');
@@ -94,8 +95,7 @@ var displayResults = function () {
 
       }));
       $('.resultsSpace').append('<h4>Number of Guesses: ' + guessCounter + '</h4>');
-    }
-  }
+
 };//displayResults
 
 //reset onClick
