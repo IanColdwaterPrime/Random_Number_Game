@@ -28,7 +28,7 @@ app.post( '/maxNumber', urlencodedParser, function ( req, res) {
   var maxNumIn = req.body.maxNum;
   console.log('maxNumIn is ', maxNumIn);
   getRandomNumber = randomNumber(0, maxNumIn ,true);
-  console.log('getRandomNumber is' , getRandomNumber);
+  
 });
 //set up a route/url to go to in order to access public
 app.post( '/results', urlencodedParser, function ( req, res) {
@@ -41,7 +41,7 @@ console.log('req: ', req);
   var playerTwo = req.body.playerTwo;
   var playerThree = req.body.playerThree;
   var playerFour = req.body.playerFour;
-  
+
 
 
 
