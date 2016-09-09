@@ -79,16 +79,23 @@ $(document).ready(function(){
 var displayResults = function () {
   $('.resultsSpace').empty();
 
-    $('.resultsSpace').append('<h3>Player One:</h3><p> You guessed: '+playerGuesses.playerOne+ '</p> <p> You were ' +playerResults[0]+'</p>');
-    $('.resultsSpace').append('<h3>Player Two:</h3><p> You guessed: '+playerGuesses.playerTwo+ '</p> <p>You were ' +playerResults[1]+'</p>');
-    $('.resultsSpace').append('<h3>Player Three:</h3><p> You guessed: '+playerGuesses.playerThree+ '</p> <p>You were '+ playerResults[2]+'</p>');
-    $('.resultsSpace').append('<h3>Player Four:</h3><p> You guessed: '+playerGuesses.playerFour+ '</p> <p>You were ' +playerResults[3]+'</p>');
-    $('.resultsSpace').append($('<button />',{
-      class: 'reset',
-      text: 'Reset Game',
+  for (var i = 0; i < playerResults.length; i++) {
+    if(playerResults[i] === "THE WINNER"){
+      $('.winner').show();
+    }else{
 
-    }));
-    $('.resultsSpace').append('<h4>Number of Guesses: ' + guessCounter + '</h4>');
+      $('.resultsSpace').append('<h3>Player One:</h3><p> You guessed: '+playerGuesses.playerOne+ '</p> <p> You were ' +playerResults[0]+'</p>');
+      $('.resultsSpace').append('<h3>Player Two:</h3><p> You guessed: '+playerGuesses.playerTwo+ '</p> <p>You were ' +playerResults[1]+'</p>');
+      $('.resultsSpace').append('<h3>Player Three:</h3><p> You guessed: '+playerGuesses.playerThree+ '</p> <p>You were '+ playerResults[2]+'</p>');
+      $('.resultsSpace').append('<h3>Player Four:</h3><p> You guessed: '+playerGuesses.playerFour+ '</p> <p>You were ' +playerResults[3]+'</p>');
+      $('.resultsSpace').append($('<button />',{
+        class: 'reset',
+        text: 'Reset Game',
+
+      }));
+      $('.resultsSpace').append('<h4>Number of Guesses: ' + guessCounter + '</h4>');
+    }
+  }
 };//displayResults
 
 //reset onClick
