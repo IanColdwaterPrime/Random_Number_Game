@@ -7,7 +7,7 @@
     <script src="scripts/numbersGame.js"></script>
     <link rel="stylesheet" href="style.css">
   </head>
-  <body>
+  <body onLoad="hideWinner()">
   <div class="maxStart"></div>
     <select id="maxNumIn">
       <option value="99">99</option>
@@ -20,34 +20,8 @@
   <div class="resultsSpace"></div>
   <div class="winner">
   <h1>WINNER!!!!</h1>
-  <style>
-@-webkit-keyframes winner {
-  0%   { background-color: #6fff00; }
-  25% { background-color: #ff00ff; }
-  50% { background-color: #08e8de; }
-  75% { background-color: #ffff00; }
-  100% { background-color: #993cf3; }
-}
-@-moz-keyframes winner {
-  0%   { background-color: #6fff00; }
-  25% { background-color: #ff00ff; }
-  50% { background-color: #08e8de; }
-  75% { background-color: #ffff00; }
-  100% { background-color: #993cf3; }
-}
-@keyframes winner {
-  0%   { background-color: #6fff00; }
-  25% { background-color: #ff00ff; }
-  50% { background-color: #08e8de; }
-  75% { background-color: #ffff00; }
-  100% { background-color: #993cf3; }
-}
-body {
--webkit-animation: winner 1s infinite;
--moz-animation:    winner 1s infinite;
-animation:         winner 1s infinite;
-}
-</style>
-<button class="reset" id="winner">Restart Game</div>
+
+<button class="reset" id="winner">Restart Game</button>
+</div>
   </body>
 </html>

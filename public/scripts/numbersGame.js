@@ -3,7 +3,10 @@ console.log('numbersGame is sourced');
 var playerGuesses={};
 
  //doc ready
+
+
 $(document).ready(function(){
+
   console.log('JQ is working');
   //initilaize player variables
   var playerOneInput = 0;
@@ -81,9 +84,12 @@ var displayResults = function () {
 
   for (var i = 0; i < playerResults.length; i++) {
     if(playerResults[i] === "THE WINNER"){
+      $('.resultsSpace').empty();
+      $('.inputForm').empty();
+      $('#submitButton').hide();
       $('.winner').show();
-    }
-  }  
+    }//END If statement
+  }
 
       $('.resultsSpace').append('<h3>Player One:</h3><p> You guessed: '+playerGuesses.playerOne+ '</p> <p> You were ' +playerResults[0]+'</p>');
       $('.resultsSpace').append('<h3>Player Two:</h3><p> You guessed: '+playerGuesses.playerTwo+ '</p> <p>You were ' +playerResults[1]+'</p>');
@@ -94,7 +100,7 @@ var displayResults = function () {
         text: 'Reset Game',
 
       }));
-      $('.resultsSpace').append('<h4>Number of Guesses: ' + guessCounter + '</h4>');
+      $('.gameSpace').append('<h4>Number of Guesses: ' + guessCounter + '</h4>');
 
 };//displayResults
 
@@ -110,3 +116,7 @@ $('body').on('click', ".reset", function(){
 });//end reset on click
 
 });//end Doc ready
+
+var hideWinner = function(){
+  $('.winner').hide();
+};

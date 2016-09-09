@@ -31,8 +31,35 @@ button:hover {
 }
 
 
-.winner {
-  display: none;
+.winner animate {
+  animation-name: winner;
+}
+@-webkit-keyframes winner {
+  0%   { background-color: #6fff00; }
+  25% { background-color: #ff00ff; }
+  50% { background-color: #08e8de; }
+  75% { background-color: #ffff00; }
+  100% { background-color: #993cf3; }
+}
+@-moz-keyframes winner {
+  0%   { background-color: #6fff00; }
+  25% { background-color: #ff00ff; }
+  50% { background-color: #08e8de; }
+  75% { background-color: #ffff00; }
+  100% { background-color: #993cf3; }
+}
+@keyframes winner {
+  0%   { background-color: #6fff00; }
+  25% { background-color: #ff00ff; }
+  50% { background-color: #08e8de; }
+  75% { background-color: #ffff00; }
+  100% { background-color: #993cf3; }
+}
+
+.winner:body {
+-webkit-animation: winner 1s infinite;
+-moz-animation:    winner 1s infinite;
+animation:         winner 1s infinite;
 }
 
 h1{
