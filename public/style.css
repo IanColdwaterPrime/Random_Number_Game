@@ -32,6 +32,7 @@ button:hover {
 
 
 .winner {
+  display: none;
 }
 
 h1{
